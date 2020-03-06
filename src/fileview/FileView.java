@@ -63,7 +63,7 @@ public class FileView extends Application {
         VBox txt = new VBox(txtA);
 
         open.setOnAction(z -> {
-
+            txtA.clear();
             fileChooser = new FileChooser();
             selectedFile = fileChooser.showOpenDialog(null);
             try ( Scanner scanner = new Scanner(selectedFile)) {
@@ -92,6 +92,7 @@ public class FileView extends Application {
 
             }
             txtA.clear();
+            txtA.setText("Plese Seclect Text File \n File -> open");
             txtA.setEditable(false);
         });
 
